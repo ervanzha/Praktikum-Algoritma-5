@@ -1,0 +1,41 @@
+@author: ervan
+"""
+
+nilai = 0    
+nsiswa = list() 
+
+ulang = 0
+nomor = 0
+while ulang == 0:
+    nomor += 1
+    n = str(input('"Selesai" untuk mengakhiri!\nRata-rata nilai siswa: ')) 
+    if n == 'Selesai': 
+        ulang = 1
+    else:
+        if (n == 'A'):
+            nilai = float(4.0)
+        elif (n == 'A-'):
+            nilai = float(3.75)
+        elif (n == 'B+'):
+            nilai = float(3.5) 
+        elif (n == 'B'):
+            nilai = float(3.0)
+        elif (n == 'B-'):
+            nilai = float(2.75)
+        elif (n == 'C+'):
+            nilai = float(2.5)
+        elif (n == 'C'):
+            nilai = float(2.0)
+        elif (n == 'C-'):
+            nilai = float(1.75)
+        elif (n == 'D'):
+            nilai = float(1.5)
+        elif (n == 'E'):
+            nilai = float(1.25)
+        else:
+            print("Tidak ada..")
+            nilai = 0
+        print(('\nNilai ke-{0} = {1}').format(nomor,nilai))
+        nsiswa.append(nilai)
+rata2 = sum(nsiswa) / len(nsiswa) 
+print('Rata ratanya n:', rata2)   
